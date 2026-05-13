@@ -4,9 +4,9 @@
 		<link rel="icon" href="images/favicon.png" sizes="32x32">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<title>Slice Master </title>
+		<title>Slice Master - Ultimate Cutting Game Play Online </title>
       <meta name="keywords" content="Slice Master, Slice Master, Slice Master online, play Slice Master, winter games, snow games, Slice Master free, Slice Master game, Slice Master game, unblocked games, snowboarding game, winter racing, Slice Master online, Slice Master, Slice Master adventure">
-	<meta name="description" content="Soccer Random : Fun football game with chaotic physics. Play solo or two-player, make realistic kicks, and score goals. Free, ad-free, unblocked, fullscreen fun!">
+	<meta name="description" content="Slice Master – Play the #1 free online knife-slicing game. Cut, slice & destroy everything in your path. Unlock legendary knives & beat every level. Play Slice Master free now!">
     <meta name="robots" content="index, follow">			
 <meta name="author" content="soccer random Game Team">			
 <meta name="publisher" content="soccer random Game Team">	
@@ -20,7 +20,7 @@
       <meta property="og:image:height" content="200 px" />
       <meta property="og:title" content="slice-master-game.github.io " />
       <meta property="og:site_name" content="slice-master-game.github.io " />
-      <meta property="og:description" content="Soccer Random: Fun football game with chaotic physics! Play solo or two-player, make realistic kicks, and score goals. Free, ad-free, unblocked, fullscreen fun!" />
+      <meta property="og:description" content="Slice Master – Play the #1 free online knife slicing game. Cut, slice & destroy everything in your path. Unlock legendary knives & beat every level. Play Slice Master free now!" />
       <meta property="og:type" content="website" />
       <meta property="og:image" content="images/icon_game.png">
 
@@ -43,7 +43,235 @@
 <script type="text/javascript" async>!function(e,t){a=e.createElement("script"),m=e.getElementsByTagName("script")[0],a.async=1,a.src=t,m.parentNode.insertBefore(a,m)}(document,"https://universal.wgplayer.com/tag/?lh="+window.location.hostname+"&wp="+window.location.pathname+"&ws="+window.location.search);
 </script>
 
-
+  <style>
+    :root {
+      --blade: #ff3c38;
+      --blade-light: #ff6b38;
+      --ink: #0d0d0d;
+      --paper: #faf7f2;
+      --accent: #ffe135;
+      --muted: #555;
+      --card-bg: #ffffff;
+      --border: #e8e3db;
+    }
+ 
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+ 
+    /* ── HERO ── */
+    .hero {
+      background: var(--ink);
+      color: #fff;
+      padding: 72px 24px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 28px,
+        rgba(255,60,56,.06) 28px,
+        rgba(255,60,56,.06) 30px
+      );
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--blade);
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: .85rem;
+      letter-spacing: .12em;
+      padding: 4px 14px;
+      border-radius: 2px;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      letter-spacing: .04em;
+      line-height: 1.05;
+      position: relative;
+    }
+    .hero h1 span { color: var(--blade); }
+    .hero-sub {
+      margin: 18px auto 0;
+      max-width: 620px;
+      font-size: 1.1rem;
+      color: #ccc;
+      position: relative;
+    }
+    .hero-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--blade);
+      margin: 28px auto 0;
+    }
+ 
+    /* ── WRAPPER ── */
+    .wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+ 
+    /* ── SECTIONS ── */
+    .section {
+      padding: 56px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .section:last-child { border-bottom: none; }
+ 
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      letter-spacing: .05em;
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+    h2 .highlight {
+      color: var(--blade);
+    }
+ 
+    p { margin-bottom: 16px; color: #222; }
+    p:last-child { margin-bottom: 0; }
+ 
+    /* ── HOW TO PLAY STEPS ── */
+    .steps {
+      display: grid;
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .step {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--blade);
+      border-radius: 6px;
+      padding: 20px 24px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .step-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem;
+      color: var(--blade);
+      line-height: 1;
+      min-width: 36px;
+    }
+    .step-body strong {
+      display: block;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .step-body p { font-size: .95rem; margin: 0; color: var(--muted); }
+ 
+    /* ── FEATURE GRID ── */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .feat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 22px 20px;
+      text-align: center;
+    }
+    .feat-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .feat-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: .06em;
+      margin-bottom: 6px;
+    }
+    .feat-card p { font-size: .9rem; color: var(--muted); margin: 0; }
+ 
+    /* ── CTA BUTTON ── */
+    .cta-wrap {
+      text-align: center;
+      margin-top: 36px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--blade);
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: .1em;
+      padding: 16px 44px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+      box-shadow: 0 4px 18px rgba(255,60,56,.35);
+    }
+    .cta-btn:hover { background: #d62f2b; transform: translateY(-2px); }
+ 
+    /* ── FAQ ── */
+    .faq-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    details {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    summary {
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 18px 22px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--blade);
+      transition: transform .2s;
+      font-family: 'Bebas Neue', sans-serif;
+    }
+    details[open] summary::after { transform: rotate(45deg); }
+    .faq-ans {
+      padding: 0 22px 18px;
+      font-size: .95rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+    }
+ 
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      color: #777;
+      text-align: center;
+      padding: 32px 24px;
+      font-size: .875rem;
+    }
+    footer strong { color: #fff; }
+  </style>
 
 
 
@@ -57,7 +285,7 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<a class="navbar-brand js-scroll-trigger" href="/">
-          <strong>slice-master-game.github.io </strong>
+          <strong>Slice Master</strong>
         </a>
 	
 
@@ -1119,99 +1347,134 @@
  </main>
     <div class="container">
       <div class="banner-ad-content" style="padding: 20px; text-align: center;">
-  <h1> SOCCER RANDOM ⚽</h1>
-        <div class="badge">🔥 Chaos physics • 2-player mayhem • Ad-free fun</div>
-    </div>
-
-    <div class="game-link-card">
-        <div class="cta-text">
-            🎮 <strong>Soccer Random</strong> is a completely free game that can be played directly in your browser at 
-            <span>ragdoll playground</span>. It's one of the most popular 2-player soccer games today thanks to its fun and unpredictable gameplay.
+   <div class="hero-badge">🔪 #1 Knife-Slicing Game Online</div>
+    <h1>SLICE <span>MASTER</span></h1>
+    <p class="hero-sub">Take to the skies and destroy everything in your path in <strong>Slice Master</strong>. From coconuts to coffee cups, from bricks to burgers — can you max out your score?</p>
+    <div class="hero-divider"></div>
+  </header>
+ 
+  <main>
+ 
+    <!-- INTRO -->
+    <section class="section">
+      <div class="wrapper">
+        <h2>What Is <span class="highlight">Slice Master</span>?</h2>
+        <p><strong>Slice Master</strong> is the ultimate casual one-button arcade experience built for precision, timing, and pure satisfying destruction. <strong>Slice Master</strong> stimulates the mind and attracts the attention of ASMR game lovers — cut everything and relax by listening to the crisp sounds after each slice. Whether you're dicing coconuts, smashing coffee cups, cleaving bricks, or carving through burgers, every object begs to be cut.</p>
+        <p>As a casual one-person game, <strong>Slice Master</strong> keeps the goal refreshingly simple: slice everything in sight — well, <em>almost</em> everything. This one-button game is driven by precision, timing, and discernment to rack up a high score that keeps you coming back for one more run. <strong>Slice Master</strong> bridges the gap between fast-paced arcade action and the meditative calm of ASMR satisfaction, creating an experience that's impossible to put down.</p>
+        <p>Unlock 10 legendary knives, beat every arcade level, and compete for the top spot. Play <strong>Slice Master</strong> free online now and start your cutting adventure today!</p>
+ 
+        <div class="cta-wrap">
+          <a href="https://slice-master-game.github.io/" class="cta-btn">▶ PLAY SLICE MASTER FREE</a>
         </div>
-        <a href="https://slice-master-game.github.io/" class="site-button" target="_blank" rel="noopener noreferrer">
-            ▶ PLAY NOW
-        </a>
-    </div>
-
-    <!-- H2 + H3 structure inside content -->
-    <div class="content-grid">
-        <!-- left column: main description with H2, H3 -->
-        <div class="info-panel">
-            <h2>⚽ What is Soccer Random?</h2>
-            <p><strong>Soccer Random</strong> is a physics-based soccer game where players control unpredictable, wobbly characters in fast-paced matches, using simple controls to score goals in ever-changing environments. <strong>Soccer Random: Fun football game with chaotic physics!</strong> Play solo or two-player, make realistic kicks, and score goals. Free, ad-free, unblocked, fullscreen fun!</p>
-            <br>
-            <p>Experience the ultimate gaming thrill with <strong>Soccer Random</strong>! Play directly in your browser, enjoy fullscreen mode, and immerse yourself in uninterrupted gameplay – completely ad‑free. Dive into the adventure today! <strong>Soccer Random unblocked</strong> is a fun football game where we can choose a team from among different teams and play football with the opponents we face. <strong>Soccer Random</strong> is a great two-player game in which players can enjoy many exciting matches. Let's make a realistic kick and head the ball toward the goal!</p>
-            
-            <h3>🎲 Chaotic & Hilarious Action</h3>
-            <p><strong>Soccer Random</strong> is a chaotic and hilarious pixel-art soccer game where anything can happen! With just a single click, your players hop, kick, and stumble their way across the pitch, trying to score in the most unpredictable ways. Challenge a friend in two-player mode or test your skills against the computer.</p>
-            
-            <h3>⚡ Why Players Love It</h3>
-            <ul class="feature-list">
-                <li>🧠 Unpredictable ragdoll physics – every goal is unique</li>
-                <li>👥 2-player local battles & single‑player vs AI</li>
-                <li>🕹️ One‑button controls: jump & kick with a tap</li>
-                <li>🌈 Colourful stadiums with random events</li>
-                <li>🚫 Zero ads, zero downloads, pure instant mayhem</li>
-            </ul>
-            <p>Whether you're looking for a laugh with friends or a quick adrenaline rush, <strong>Soccer Random</strong> delivers. The combination of ridiculous character movement and crazy ball physics makes every match an unforgettable story.</p>
-        </div>
-
-        <!-- right column: gameplay instructions + H2 & H3 -->
-        <div class="instructions-panel">
-            <h2>📖 How to Play Soccer Random</h2>
-            <p>Master the madness! Despite chaotic physics, the rules are simple. Here is your complete guide:</p>
-            
-            <h3>🎮 Controls & Modes</h3>
-            <ol class="steps">
-                <li><strong>Choose your mode:</strong> 1 Player (vs AI) or 2 Players (local multiplayer).</li>
-                <li><strong>Basic controls:</strong> Press <span class="game-highlight">SPACEBAR</span> (or tap on mobile / click mouse) to make your character jump and kick simultaneously.</li>
-                <li><strong>2-Player controls:</strong> Player 1 uses <span class="game-highlight">SPACEBAR</span> / Player 2 uses <span class="game-highlight">ENTER</span> or <span class="game-highlight">'K'</span> key, depending on version – jump to strike the ball.</li>
-                <li><strong>Score goals:</strong> Time your jump to head the ball or volley it into the opponent's net. Physics makes every shot unique – you might slide, trip, or bounce!</li>
-            </ol>
-
-            <h3>🏆 Pro Tips & Win Condition</h3>
-            <p><strong>Strategy tip:</strong> Because your character moves randomly, don’t spam jump. Wait for the ball to come close, then jump precisely. Anticipate the ball trajectory – it might curve unpredictably. First player to score <strong>5 goals</strong> wins the match. After each goal, the ball respawns at center and the chaos continues!</p>
-            <p>In two-player mode, try to body-block your friend. The ragdoll collisions often result in hilarious own goals. Experience <strong>Soccer Random</strong> in fullscreen for total immersion – it's ad‑free, unblocked, and always fun.</p>
-            <div style="background: #2b5b53; border-radius: 1.5rem; padding: 0.7rem; margin-top: 1rem; text-align: center;">
-                💡 <strong>Quick reminder:</strong> Soccer Random is completely free – no login, no download. Pure browser chaos!
+      </div>
+    </section>
+ 
+    <!-- HOW TO PLAY -->
+    <section class="section">
+      <div class="wrapper">
+        <h2>How to Play <span class="highlight">Slice Master</span></h2>
+        <p>Getting started with <strong>Slice Master</strong> is instant — no downloads, no sign-ups. Just one button stands between you and slicing glory. Follow these steps to master the blade:</p>
+ 
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <strong>Launch & Pick Your Knife</strong>
+              <p>Open the game and choose from your unlocked collection of legendary knives. Each blade has its own personality — start with the classic knife and earn coins to unlock more.</p>
             </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <strong>Tap or Click to Slice</strong>
+              <p>Press and hold (or tap on mobile) to swing your knife downward through objects. Release to stop. Timing your press is everything — nail the sweet spot to rack up combo multipliers.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <strong>Slice Everything — Avoid Bombs</strong>
+              <p>Cut through fruits, food items, bricks, and everyday objects for maximum points. Watch out for bombs and protected objects — slicing those ends your run instantly.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <strong>Chain Combos for Huge Scores</strong>
+              <p>Hit multiple objects in one swing to build combo chains. The more you connect, the higher your score multiplier climbs. Precision and timing are your best weapons.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">5</div>
+            <div class="step-body">
+              <strong>Unlock Knives & Beat Levels</strong>
+              <p>Earn coins with every successful slice to unlock all 10 legendary knives. Progress through increasingly challenging arcade levels and prove you're the true <strong>Slice Master</strong>.</p>
+            </div>
+          </div>
         </div>
-    </div>
-
-    <!-- H2 for FAQ section (using heading hierarchy) -->
-    <div class="faq-section">
-        <h2>❓ Frequently Asked Questions — Soccer Random</h2>
-        
-        <div class="faq-item">
-            <div class="faq-question">Is Soccer Random really free and playable unblocked anywhere?</div>
-            <div class="faq-answer">Absolutely! <strong>Soccer Random</strong> is 100% free and works unblocked on most networks including schools and offices. Because it’s lightweight and browser‑based, you can enjoy <strong>Soccer Random</strong> without restrictions. No premium walls, no ads – just chaotic football fun. And remember, <strong>Soccer Random</strong> is a completely free game that can be played directly in your browser at ragdoll playground, giving you instant access to unpredictable matches.</div>
+      </div>
+    </section>
+ 
+    <!-- FEATURES -->
+    <section class="section">
+      <div class="wrapper">
+        <h2>Why <span class="highlight">Slice Master</span> Is Addictive</h2>
+        <p>From the very first swipe, <strong>Slice Master</strong> hooks you with satisfying feedback, clever level design, and a reward loop that's hard to quit. Here's what makes it special:</p>
+ 
+        <div class="features">
+          <div class="feat-card">
+            <div class="feat-icon">🔪</div>
+            <h3>10 Legendary Knives</h3>
+            <p>Each blade feels unique. Unlock all 10 and find your perfect slice style.</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">🎯</div>
+            <h3>One-Button Precision</h3>
+            <p>Simple controls, deep mastery. One tap separates beginners from legends.</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">🎧</div>
+            <h3>ASMR Sound Design</h3>
+            <p>Every slice produces crisp, satisfying audio that soothes and thrills simultaneously.</p>
+          </div>
+          <div class="feat-card">
+            <div class="feat-icon">🏆</div>
+            <h3>Endless Arcade Levels</h3>
+            <p>Beat progressively harder levels packed with new objects, obstacles, and surprises.</p>
+          </div>
         </div>
-
-        <div class="faq-item">
-            <div class="faq-question">Can I play Soccer Random alone or only with a friend?</div>
-            <div class="faq-answer">Yes! <strong>Soccer Random</strong> offers both single-player (vs AI) and two-player local multiplayer modes. If you have a buddy, choose 2P mode and share the keyboard for intense, laughable matches. Playing solo? The AI opponent provides a solid challenge, but the crazy physics ensures that you'll never get bored. Either way, <strong>Soccer Random</strong> keeps you entertained with its hilarious ragdoll playground feel.</div>
+      </div>
+    </section>
+ 
+    <!-- FAQ -->
+    <section class="section">
+      <div class="wrapper">
+        <h2>Frequently Asked Questions — <span class="highlight">Slice Master</span></h2>
+ 
+        <div class="faq-list">
+          <details>
+            <summary>Is Slice Master free to play online?</summary>
+            <div class="faq-ans">
+              Yes! <strong>Slice Master</strong> is 100% free to play directly in your browser with no downloads or sign-ups required. Simply visit the game page and start slicing immediately. <strong>Slice Master</strong> is also available as an unblocked game, making it accessible from school, work, or anywhere you need a quick break.
+            </div>
+          </details>
+ 
+          <details>
+            <summary>How do I unlock all knives in Slice Master?</summary>
+            <div class="faq-ans">
+              You unlock knives in <strong>Slice Master</strong> by collecting coins during gameplay. Every successful slice earns you coins, and chaining combos multiplies your haul. Once you've gathered enough, head to the knife shop between rounds to spend your coins on new legendary blades. There are 10 legendary knives in total to discover.
+            </div>
+          </details>
+ 
+          <details>
+            <summary>What makes Slice Master different from other casual games?</summary>
+            <div class="faq-ans">
+              <strong>Slice Master</strong> uniquely combines ASMR-style audio satisfaction with skill-based one-button gameplay. Unlike many casual titles, it rewards precision and timing rather than just rapid tapping. The combination of deeply satisfying slice sounds, progressive difficulty, diverse objects to cut, and a rich knife-unlock system gives <strong>Slice Master</strong> exceptional replay value that keeps players returning to beat their own high scores.
+            </div>
+          </details>
         </div>
-
-        <div class="faq-item">
-            <div class="faq-question">What makes Soccer Random different from regular soccer games?</div>
-            <div class="faq-answer"><strong>Soccer Random</strong> embraces pure chaos and ragdoll physics. Unlike realistic simulators, your wobbly character stumbles, bounces, and leaps unexpectedly. Random weather, bouncy ball behavior, and altered gravity appear in every match. The one‑button control scheme means anyone can play, yet the unpredictability keeps every session fresh. It's the ultimate party game for those who love hilarious, fast-paced action and unforgettable goals.</div>
-        </div>
-    </div>
-
-    <!-- Extra content block: 500+ words ensured + reinforces H3 for additional semantic structure -->
-    <div style="margin: 1.8rem 0 0.8rem; background: #143b36a0; border-radius: 1.8rem; padding: 1.2rem 1.6rem;">
-        <h2 style="margin-bottom: 0.5rem;">🎯 Why Soccer Random Is Taking Over</h2>
-        <p><strong>Soccer Random</strong> is more than just a game – it's a hilarious rollercoaster. Each round lasts about 90 seconds of pure unpredictable mayhem. With more than 30 different arenas and random weather effects like wind or bouncy fields, you’ll never play the same match twice. The ragdoll characters react exactly like in ragdoll playground classics, making every tackle, jump, and header a comedy moment. Whether you're scoring a bicycle kick or accidentally pushing the ball into your own net, <strong>Soccer Random</strong> will make you and your friends burst out laughing.</p>
-        <h3>🔥 Two-Player Mayhem & Competitive Edge</h3>
-        <p>The local two-player mode is perfect for parties, sleepovers, or quick breaks. Compete against a friend on the same keyboard; each button press leads to chaotic dogfights for the ball. Meanwhile, single-player mode offers a decent AI opponent that will test your timing and unpredictability skills. <strong>Soccer Random</strong> is a great two-player game in which players can enjoy many exciting matches. Let's make a realistic kick and head the ball toward the goal! Experience the ultimate gaming thrill with <strong>Soccer Random</strong> – play fullscreen, ad-free, and dive into uninterrupted soccer action!</p>
-        <h3>🌟 Join the Community of Ragdoll Lovers</h3>
-        <p>With thousands of daily players, <strong>Soccer Random</strong> has become a cult hit among fans of silly sports games. The combination of easy-to-learn controls and deep chaotic physics means everyone from kids to adults finds joy. No need to worry about complicated combos or skill curves – just jump, kick, and hope for the best. Plus, since the game is completely unblocked and runs on any modern browser (mobile or desktop), you can enjoy <strong>Soccer Random</strong> at home, at school, or during a work break. Visit our website and start your match now!</p>
-        <p>Remember: <strong>Soccer Random unblocked</strong> is a fun football game where we can choose a team from among different teams and play football with the opponents we face. The game keeps you on your toes, and each goal feels like a miracle. Go ahead, challenge your friends, master the wobbly jump, and become a legend of chaos. It’s time to experience the most entertaining football game on the internet – <strong>Soccer Random</strong>.</p>
-    </div>
-
-
-
-
+      </div>
+    </section>
 
 
 
