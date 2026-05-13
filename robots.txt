@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin
+
+Allow: /sitemap.xml
+
+Sitemap: https://slice-master-game.github.io/sitemap.xml
